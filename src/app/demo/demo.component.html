@@ -5,6 +5,7 @@
 <input class="form-control" [(ngModel)]="username"> 
 <p>{{username}}</p>
 <hr>
+<img src="{{img}}" alt="">
 <input type="number" class="form-control" [(ngModel)]="age"> 
 <p [ngClass]="{'red':age<20,'gray':age>60}">i'm {{age}} years old</p>
 <select [ngClass]="{'hide':age<=20}" class="form-control" [(ngModel)]="branch">

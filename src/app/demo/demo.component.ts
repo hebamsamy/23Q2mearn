@@ -11,6 +11,7 @@ import { Component } from "@angular/core";
 export class DemoCom{
     username:string="Walaa";
     branch:string= "Aswan";
+    img:string="gchxchjgjh"
     age:number = 20
     change(e:string){
         console.log(e)
