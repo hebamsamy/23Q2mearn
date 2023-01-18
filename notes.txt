@@ -1,0 +1,6 @@
+
+[ngClass]="{
+    'red':age<20,
+    'gray':age>60,
+    
+    }"

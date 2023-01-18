@@ -1,0 +1,9 @@
+<p>todo works!</p>
+<div class="container">
+    <input type="text" [(ngModel)]="text" (keyup.enter)="add()">
+    <ul>
+        <li *ngFor="let item of tasks">
+            <input type="checkbox" [checked]="item.isDone">
+            {{item.info}}  {{item.Date|date}}</li>
+    </ul>
+</div>

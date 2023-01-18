@@ -1,0 +1,13 @@
+p{
+    font-size: 30px;
+    color: green;
+}
+.red {
+    color: red;
+}
+.gray{
+    color: gray;
+}
+.hide{
+    display: none;
+}
