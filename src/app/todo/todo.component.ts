@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IToDoItem, ToDoItem } from '../models/todoItem';
+import { TextService } from '../services/text.service';
 
 @Component({
   selector: 'app-todo',
@@ -18,9 +19,16 @@ export class TodoComponent  {
     isDone:true,
     Date:new Date()
   }];
-  //  list:ToDoItem[]=[];
+  // serv:TextService;
+  constructor(private serv:TextService ){
+    // this.serv = new TextService()
+    console.log(TextService.count)
+  }
  add(){
-  // let item = new ToDoItem(this.text,false,new Date())
+ if(this.serv.isemptyText(this.text))
+ {
+    alert("can not add empty todo")
+ }
   let item :IToDoItem ={
     info:this.text,
     isDone:false,
