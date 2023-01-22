@@ -12,6 +12,12 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductService } from './services/product.service';
+import { UserLayoutComponent } from './user-layout/user-layout.component';
+import { VendorLayoutComponent } from './vendor-layout/vendor-layout.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { CardboxDirective } from './directive/cardbox.directive';
+import { MoneyPipe } from './pipes/money.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +28,12 @@ import { ProductService } from './services/product.service';
     NavbarComponent,
     NotfoundComponent,
     ProductsComponent,
+    UserLayoutComponent,
+    VendorLayoutComponent,
+    LoginComponent,
+    RegisterComponent,
+    CardboxDirective,
+    MoneyPipe
     // ProductDetailsComponent
   ],
   imports: [

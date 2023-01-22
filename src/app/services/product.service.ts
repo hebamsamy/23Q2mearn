@@ -10,7 +10,7 @@ export class ProductService {
     {
         id: 1,
         name: "Lenvo thinpad X230",
-        price: 100,
+        price: 1003333,
         quantity: 10,
         categoryID: 1,
         imgURL: "https://picsum.photos/200"
@@ -18,7 +18,7 @@ export class ProductService {
     {
         id: 2,
         name: "Dell",
-        price: 200,
+        price: 20033333,
         quantity: 20,
         categoryID: 1,
         imgURL: "https://picsum.photos/200"
@@ -26,7 +26,7 @@ export class ProductService {
     {
         id: 3,
         name: "Lenovo Tab",
-        price: 100,
+        price: 1003333,
         quantity: 10,
         categoryID: 2,
         imgURL: "https://picsum.photos/200"
@@ -34,7 +34,7 @@ export class ProductService {
     {
         id: 4,
         name: "Samsung Tab",
-        price: 100,
+        price: 10077777,
         quantity: 10,
         categoryID: 2,
         imgURL: "https://picsum.photos/200"
@@ -42,7 +42,7 @@ export class ProductService {
     {
         id: 5,
         name: "Samsung note 10",
-        price: 100,
+        price: 10000000,
         quantity: 10,
         categoryID: 3,
         imgURL: "https://picsum.photos/200"
@@ -50,7 +50,7 @@ export class ProductService {
     {
         id: 6,
         name: "Samsung S10",
-        price: 100,
+        price: 1000000,
         quantity: 10,
         categoryID: 3,
         imgURL: "https://picsum.photos/200"
@@ -58,7 +58,7 @@ export class ProductService {
     {
         id: 7,
         name: "tochiba Utlra",
-        price: 60000,
+        price: 60000999,
         quantity: 14,
         imgURL: "https://fakeimg.pl/200x100",
         categoryID: 4
@@ -82,7 +82,7 @@ export class ProductService {
     {
         id: 10,
         name: "jhgfjxz",
-        imgURL: "http://xgcbmxgvnbx",
+        imgURL: "https://fakeimg.pl/200x100",
         quantity: 33,
         price: 44444444,
         categoryID: 1
