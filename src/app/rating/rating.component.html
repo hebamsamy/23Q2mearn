@@ -1,0 +1,8 @@
+<p *ngIf="value==0">not provided</p>
+<ng-container [ngSwitch]="value">
+<span *ngSwitchCase="1">😥</span>
+<span *ngSwitchCase="2">🙂</span>
+<span *ngSwitchCase="3">😉</span>
+<span *ngSwitchCase="4">😍</span>
+<span *ngSwitchCase="5">❤</span>
+</ng-container>

@@ -18,6 +18,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CardboxDirective } from './directive/cardbox.directive';
 import { MoneyPipe } from './pipes/money.pipe';
+import { RatingComponent } from './rating/rating.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,10 @@ import { MoneyPipe } from './pipes/money.pipe';
     LoginComponent,
     RegisterComponent,
     CardboxDirective,
-    MoneyPipe
-    // ProductDetailsComponent
+    MoneyPipe,
+    RatingComponent,
+    ProductDetailsComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

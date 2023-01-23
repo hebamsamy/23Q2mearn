@@ -2,5 +2,7 @@
 
 <h1>{{current?.name}}</h1>
 
-
+<app-rating [value]="current!.rate"></app-rating>
 <button class="btn btn-danger" (click)="remove(id)">Delete</button>
+<button class="btn btn-info" (click)="prv()">Previous</button>
+<button class="btn btn-primary" (click)="nxt()">Next</button>

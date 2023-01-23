@@ -5,7 +5,9 @@ import { Directive, ElementRef, HostListener, Input, OnChanges, SimpleChanges } 
 })
 export class CardboxDirective implements OnChanges {
   ///Attribute Decerator
-  @Input("cardbox") highColor:string= "gray"
+  // @Input("cardbox") highColor:string= "gray"
+  @Input("highColor") highColor:string= "gray"
+
   constructor(private elem:ElementRef) { 
   }
   ngOnChanges(): void {

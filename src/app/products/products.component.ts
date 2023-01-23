@@ -9,7 +9,8 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductsComponent implements OnInit,OnChanges,OnDestroy {
   list:IProduct[];
-  mycolor:string='#ff000'
+  mycolor:string='#ff000';
+  recivedPrice:number=0
   currentDate=new Date()
   constructor(private prdServ:ProductService,) { 
     this.list =this.prdServ.getall()
@@ -26,6 +27,11 @@ export class ProductsComponent implements OnInit,OnChanges,OnDestroy {
   ngOnDestroy(): void {
     console.log("ngOnDestroy")
 
+  }
+
+  recivecurruntPrice(p:number){
+    console.log(p)
+    this.recivedPrice += p
   }
 
 

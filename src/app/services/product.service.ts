@@ -13,7 +13,8 @@ export class ProductService {
         price: 1003333,
         quantity: 10,
         categoryID: 1,
-        imgURL: "https://picsum.photos/200"
+        imgURL: "https://picsum.photos/200",
+        rate:3
     },
     {
         id: 2,
@@ -21,6 +22,7 @@ export class ProductService {
         price: 20033333,
         quantity: 20,
         categoryID: 1,
+        rate:4,
         imgURL: "https://picsum.photos/200"
     },
     {
@@ -29,7 +31,8 @@ export class ProductService {
         price: 1003333,
         quantity: 10,
         categoryID: 2,
-        imgURL: "https://picsum.photos/200"
+        imgURL: "https://picsum.photos/200",
+        rate:3,
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ export class ProductService {
         price: 10077777,
         quantity: 10,
         categoryID: 2,
-        imgURL: "https://picsum.photos/200"
+        imgURL: "https://picsum.photos/200",
+        rate:1,
     },
     {
         id: 5,
@@ -45,7 +49,8 @@ export class ProductService {
         price: 10000000,
         quantity: 10,
         categoryID: 3,
-        imgURL: "https://picsum.photos/200"
+        imgURL: "https://picsum.photos/200",
+        rate:5,
     },
     {
         id: 6,
@@ -53,7 +58,8 @@ export class ProductService {
         price: 1000000,
         quantity: 10,
         categoryID: 3,
-        imgURL: "https://picsum.photos/200"
+        imgURL: "https://picsum.photos/200",
+        rate:3,
     },
     {
         id: 7,
@@ -61,7 +67,9 @@ export class ProductService {
         price: 60000999,
         quantity: 14,
         imgURL: "https://fakeimg.pl/200x100",
-        categoryID: 4
+        categoryID: 4,
+        rate:2,
+
     },
     {
         id: 8,
@@ -69,7 +77,8 @@ export class ProductService {
         price: 7800060,
         quantity: 6,
         imgURL: "https://fakeimg.pl/200x100",
-        categoryID: 4
+        categoryID: 4,
+        rate:3,
     },
     {
         id: 9,
@@ -77,7 +86,8 @@ export class ProductService {
         price: 7800060,
         quantity: 3,
         imgURL: "https://fakeimg.pl/200x100",
-        categoryID: 4
+        categoryID: 4,
+        rate:3,
     },
     {
         id: 10,
@@ -85,7 +95,8 @@ export class ProductService {
         imgURL: "https://fakeimg.pl/200x100",
         quantity: 33,
         price: 44444444,
-        categoryID: 1
+        categoryID: 1,
+        rate:1,
     },
     {
         name: "fsdjhfgsdjhkgfsh",
@@ -93,7 +104,8 @@ export class ProductService {
         quantity: 3,
         imgURL: "https://fakeimg.pl/200x100",
         categoryID: 4,
-        id: 11
+        id: 11,
+        rate:5,
     }
 ]
 

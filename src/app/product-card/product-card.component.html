@@ -1,0 +1,14 @@
+<div class="card" cardbox highColor="gray">
+    <img [src]="item.imgURL" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name|uppercase}}</h5>
+      <p class="card-text"> {{item.price|currency:'USD'}}</p>
+      <p class="card-text">{{item.price|money|currency:'EGP'}}</p>
+      <p class="card-text">
+        <app-rating [value]="item.rate"></app-rating>
+      </p>
+      <!-- <a routerLink="/products/{{item.id}}" class="btn btn-primary">see details</a> -->
+      <a [routerLink]="['/user/products/',item.id]" class="btn btn-primary">see details</a>
+   <button class="btn btn-info" (click)="buy(item.price)"> buy </button>
+    </div>
+  </div>
