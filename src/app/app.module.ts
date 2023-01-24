@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { DemoCom } from './demo/demo.component';
 import { TodoComponent } from './todo/todo.component';
-import { StudentsComponent } from './students/students.component';
-import { TextService } from './services/text.service';
+
 import { appRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
@@ -20,13 +20,17 @@ import { CardboxDirective } from './directive/cardbox.directive';
 import { MoneyPipe } from './pipes/money.pipe';
 import { RatingComponent } from './rating/rating.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { StudentListComponent } from './student/student-list/student-list.component';
+import { StudentDetailsComponent } from './student/student-details/student-details.component';
+import { AddStudentComponent } from './student/add-student/add-student.component';
+import { UpdateStudentComponent } from './student/update-student/update-student.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoCom,
     TodoComponent,
-    StudentsComponent,
     NavbarComponent,
     NotfoundComponent,
     ProductsComponent,
@@ -38,12 +42,18 @@ import { ProductCardComponent } from './product-card/product-card.component';
     MoneyPipe,
     RatingComponent,
     ProductDetailsComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    StudentListComponent,
+    StudentDetailsComponent,
+    AddStudentComponent,
+    UpdateStudentComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    appRoutingModule
+    appRoutingModule,
+    HttpClientModule
   ],
   providers: [
     // TextService

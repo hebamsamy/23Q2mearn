@@ -1,0 +1,15 @@
+<app-loader *ngIf="list.length==0"></app-loader>
+
+<div class="row" *ngIf="list.length!=0">
+    <div class="card" cardbox highColor="gray" *ngFor="let item of list">
+        <div class="card-body">
+          <h5 class="card-title">{{item.Name|uppercase}}</h5>
+          <p class="card-text"> {{item.Email}}</p>
+          <p class="card-text">{{item.Mobile}}</p>
+          <p class="card-text">{{item.NationalID}}</p>
+          <a [routerLink]="['/vendor/students/',item.ID]" class="btn btn-primary">see details</a>
+          <a [routerLink]="['/vendor/updateStudent/',item.ID]" class="btn btn-primary">Udpate</a>
+        </div>
+      </div>
+    
+</div>

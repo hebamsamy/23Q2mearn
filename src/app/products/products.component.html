@@ -1,7 +1,15 @@
 <input type="color" [(ngModel)]="mycolor">
 <h1>{{currentDate|date:"long"}}</h1>
 <p >Total Price = {{recivedPrice}}</p>
-<div class="container row" > 
-    <!-- <div class="card col-4" [cardbox]="mycolor" *ngFor="let item of list"> -->
-      <app-product-card class="col-4" [item]="item" *ngFor="let item of list" (buyitem)="recivecurruntPrice($event)" ></app-product-card>
+<div class="row">
+
+  <div class="col-10">
+    <div class="container row" > 
+        <!-- <div class="card col-4" [cardbox]="mycolor" *ngFor="let item of list"> -->
+          <app-product-card class="col-4" [item]="item" *ngFor="let item of list" (buyitem)="recivecurruntPrice($event)" ></app-product-card>
+    </div>
+  </div>
+  <div class="col-2">
+    <p *ngFor="let i of cartlist">{{i}}</p>
+  </div>
 </div>

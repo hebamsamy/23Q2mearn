@@ -10,5 +10,6 @@
       <!-- <a routerLink="/products/{{item.id}}" class="btn btn-primary">see details</a> -->
       <a [routerLink]="['/user/products/',item.id]" class="btn btn-primary">see details</a>
    <button class="btn btn-info" (click)="buy(item.price)"> buy </button>
+   <button class="btn btn-success" (click)="AddToCart(item.id)"> Add to Cart </button>
     </div>
   </div>

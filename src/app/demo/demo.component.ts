@@ -33,7 +33,7 @@ export class DemoCom implements OnDestroy{
                 console.log(data)
             },
             complete:()=>{
-                alert("Ads Finished")
+                // alert("Ads Finished")
             }
         })
         console.log("after")
