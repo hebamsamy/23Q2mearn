@@ -22,7 +22,8 @@
             <a class="nav-link" routerLink="/user/products">products</a>
           </li>
           <li class="nav-item" *ngIf="!isLogged">
-            <a class="nav-link" routerLink="/user/login">Login</a>
+            <!-- <a class="nav-link" routerLink="user/login">Login</a> -->
+            <a class="nav-link" [routerLink]="['/user/login/','']">Login</a>
           </li>
           <li class="nav-item" *ngIf="isLogged">
             <a class="nav-link" style="cursor: pointer;" (click)="logout()">Logout</a>
@@ -33,13 +34,13 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        <button type="button" class="btn btn-primary position-relative">
-          Inbox
+        <a type="button" class="btn btn-primary position-relative" routerLink="/user/cart">
+          Cart
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             {{cart.length}}
             <span class="visually-hidden">Cart</span>
           </span>
-        </button>
+        </a>
       </div>
     </div>
   </nav>

@@ -1,1 +1,33 @@
-<p>register works!</p>
+<div class="container">
+
+    <form [formGroup]="addForm" (ngSubmit)="add()">
+        <div class="mb-3">
+            <label for="" class="form-label">Full Name</label>
+            <input type="text" class="form-control" formControlName="Name" [ngClass]="{'is-invalid': addForm.controls['Name'].invalid&&addForm.controls['Name'].touched,'is-valid': addForm.controls['Name'].valid}">
+            <div *ngIf="addForm.controls['Name'].invalid&&addForm.controls['Name'].touched" >
+                <span *ngIf="addForm.controls['Name'].hasError('required')">you must enter User full name</span>
+                <span *ngIf="addForm.controls['Name'].hasError('minlength')">full name must have atleast 3 charcter</span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">User Name</label>
+            <input type="text" class="form-control" formControlName="UserName" placeholder="ex : Heba_samy"
+            [ngClass]="{'is-invalid': addForm.controls['UserName'].invalid&&addForm.controls['UserName'].touched,'is-valid': addForm.controls['UserName'].valid}">
+            <div *ngIf="addForm.controls['UserName'].invalid&&addForm.controls['UserName'].touched" >
+                <span *ngIf="addForm.controls['UserName'].hasError('required')">you must enter User name</span>
+                <span *ngIf="addForm.controls['UserName'].hasError('pattern')">User Name must match pattern like : hebasamy,heba_samy,heba-samy</span>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="Password"
+            [ngClass]="{'is-invalid': addForm.controls['Password'].invalid&&addForm.controls['Password'].touched,'is-valid': addForm.controls['Password'].valid}">
+            <div *ngIf="addForm.controls['Password'].invalid&&addForm.controls['Password'].touched" >
+                <span *ngIf="addForm.controls['Password'].hasError('required')">you must enter Password</span>
+                <span *ngIf="addForm.controls['Password'].hasError('minlength')">Password must have atleast 8 charcter</span>
+            </div>
+        </div>
+        <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+</div>

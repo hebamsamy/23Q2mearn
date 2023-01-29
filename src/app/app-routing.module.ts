@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { CartComponent } from "./cart/cart.component";
 import { DemoCom } from "./demo/demo.component";
+import { AuthGuard } from "./guards/auth.guard";
 import { LoginComponent } from "./login/login.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
@@ -19,9 +21,11 @@ let myroutes:Routes=[
     {path:"user",component:UserLayoutComponent,children:[
         {path:"",redirectTo:"/user/demo",pathMatch:"full"},
         {path:'demo',component:DemoCom} ,
-        {path:'products',component:ProductsComponent} ,
+        {path:'products',component:ProductsComponent, canActivate:[AuthGuard]} ,
         {path:'products/:pid',component:ProductDetailsComponent} ,
-        {path:'login',component:LoginComponent} ,
+        {path:'login/:url',component:LoginComponent} ,
+        {path:'register',component:RegisterComponent} ,
+        {path:"cart",component:CartComponent,canActivate:[AuthGuard]}
     ]},
     {path:"vendor",component:VendorLayoutComponent,children:[
         {path:"",redirectTo:"/vendor/todo",pathMatch:"full"},

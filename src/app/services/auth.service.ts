@@ -1,5 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { UserLogin, UserRegister } from '../models/account';
+import { ApiResult } from '../models/student';
 
 @Injectable({
   providedIn: 'root'
@@ -7,18 +11,20 @@ import { Subject } from 'rxjs';
 export class AuthService {
   isAuthrized:boolean 
   loggedSubject:Subject<boolean>
-  constructor() {
+  constructor(private http:HttpClient) {
     this.loggedSubject= new Subject<boolean>()
     this.loggedSubject.next(this.isLogged())
     this.isAuthrized = this.isLogged()
    }
-   login(usernmae:string,password:string){
+   register(user:UserRegister):Observable<ApiResult<boolean>>{
+    return this.http.post<ApiResult<boolean>>(`https://api.mohamed-sadek.com/user/post`,user)
+   }
+   login(user:UserLogin):Observable<ApiResult<string>>{
     ///call ap1
+    return this.http.post<ApiResult<string>>(`https://api.mohamed-sadek.com/user/login`,user)
     //recive token
     //save 
-    this.setToken(usernmae)
-    // this.isAuthrized =true
-    this.loggedSubject.next(true)
+    
    }
    logout(){
     this.removeToken()

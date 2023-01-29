@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ import { StudentDetailsComponent } from './student/student-details/student-detai
 import { AddStudentComponent } from './student/add-student/add-student.component';
 import { UpdateStudentComponent } from './student/update-student/update-student.component';
 import { LoaderComponent } from './loader/loader.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +48,15 @@ import { LoaderComponent } from './loader/loader.component';
     StudentDetailsComponent,
     AddStudentComponent,
     UpdateStudentComponent,
-    LoaderComponent
+    LoaderComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     appRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     // TextService
